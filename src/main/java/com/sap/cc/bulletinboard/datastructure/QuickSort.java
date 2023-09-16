@@ -8,16 +8,16 @@ public class QuickSort {
     public int partition(int[] arr, int low, int high) {
         // Implementation of the partition method
         // ...
-        int x = low;
-        int y = high;
-        int z = arr[low];
-        while (x < y) {
-            while (x < y && arr[y] >= z) --y;
-            if (x < y) arr[x++] = arr[y];
-            while (x < y && arr[x] <= z) ++x;
-            if (x < y) arr[y--] = arr[x];
+        int x_low = low;
+        int y_high = high;
+        int z_pivot = arr[low];
+        while (x_low < y_high) {
+            while (x_low < y_high && arr[y_high] >= z_pivot) --y_high;
+            if (x_low < y_high) arr[x_low++] = arr[y_high];
+            while (x_low < y_high && arr[x_low] <= z_pivot) ++x_low;
+            if (x_low < y_high) arr[y_high--] = arr[x_low];
         }
-        arr[x]=z;
-        return x;
+        arr[x_low]=z_pivot;
+        return x_low;
     }
 }
