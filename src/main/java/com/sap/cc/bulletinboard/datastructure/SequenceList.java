@@ -39,4 +39,13 @@ public class SequenceList<T> {
         length++;
         return true;
     }
+
+    public T remove(int pos){
+        T x=listArray[pos-1];
+        for(int i=pos;i<=length;i++)
+            listArray[i-1]=listArray[i];
+        length--;
+        return x;
+    }
+
 }

@@ -15,4 +15,18 @@ class SequenceListTest {
         assertTrue(list.add(1, 1));
 
     }
+
+    @Test
+    void given_2_when_remove_then_return_2() {
+        SequenceList<Integer> list = new SequenceList<>();
+        list.add(1,1);
+        list.add(2,2);
+        list.add(3,3);
+        list.add(4,4);
+
+        int removedElement = list.remove(2);
+
+        assertEquals(2, removedElement);
+
+    }
 }
