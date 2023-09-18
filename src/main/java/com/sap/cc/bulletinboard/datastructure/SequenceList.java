@@ -1,11 +1,17 @@
 package com.sap.cc.bulletinboard.datastructure;
 
+/**
+ * Data structure practice guided by Zhou, Kaiak
+ * @param <T>
+ */
+
 public class SequenceList<T> {
 
 
     final int maxSize = 10;
     private T[] listArray;
     private int length;
+
 
     public SequenceList() {
         length=0;
@@ -20,6 +26,13 @@ public class SequenceList<T> {
         length=0;
         listArray=(T[])new Object[n];
     }
+
+    /**
+     * add()
+     * @param obj
+     * @param pos
+     * @return
+     */
 
     public boolean add(T obj, int pos) {
         if(pos<1||pos>length+1){
