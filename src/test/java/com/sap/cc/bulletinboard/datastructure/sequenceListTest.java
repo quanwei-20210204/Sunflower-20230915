@@ -29,4 +29,13 @@ class SequenceListTest {
         assertEquals(2, removedElement);
 
     }
+
+    @Test
+    public void given_2_when_find_then_2() {
+        SequenceList<Integer> list = new SequenceList<>();
+        list.add(1,1);
+        list.add(2,2);
+        int index = list.find(2);
+        assertEquals(2, index);
+    }
 }

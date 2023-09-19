@@ -61,4 +61,12 @@ public class SequenceList<T> {
         return x;
     }
 
+    public int find(T obj) {
+        for(int i=0;i<length;i++){
+            if(listArray[i].equals(obj)){
+                return i+1;
+            }
+        }
+        return -1;
+    }
 }
