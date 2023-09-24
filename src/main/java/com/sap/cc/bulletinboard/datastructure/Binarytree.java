@@ -6,4 +6,12 @@ public class Binarytree<T> {
         this.root = new BinarytreeNode<T>();
     }
 
+    public Binarytree(BinarytreeNode<T> node){
+        this.root = node;
+    }
+
+    public boolean insertLeft(T x, BinarytreeNode<T> parent){
+        return false;
+    }
+
 }
