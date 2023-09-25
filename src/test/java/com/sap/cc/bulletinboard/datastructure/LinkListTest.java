@@ -13,4 +13,14 @@ class LinkListTest {
         assertTrue(result);
 
     }
+
+    @Test
+    void given_2_when_find_then_2(){
+        LinkList<Integer> list = new LinkList<>();
+        list.add(1,1);
+        list.add(2,2);
+        list.add(3,3);
+
+        assertEquals(2, list.find(2));
+    }
 }
