@@ -36,5 +36,9 @@ public class LinkList<T> {
         return num;
 
     }
+
+    public boolean isEmpty() {
+        return length == 0;
+    }
 }
 

@@ -23,4 +23,10 @@ class LinkListTest {
 
         assertEquals(2, list.find(2));
     }
+
+    @Test
+    void given_when_empty_then_true(){
+        LinkList<Integer> list = new LinkList<>();
+        assertTrue(list.isEmpty());
+    }
 }
